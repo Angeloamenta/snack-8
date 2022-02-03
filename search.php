@@ -6,15 +6,15 @@ if (isset($_GET['type']) !== false || isset($_GET['price']) !== false) {
     $type = $_GET['type'];
     $price = $_GET['price'];
     var_dump($price);
-    if ($type === 'all' || $price === 'all') {
+    if ($type === 'all' && $price === 'all') {
         $typeFilter = $products;
         
     } else {
     $typeFilter = [];
     foreach ($products as $product) {
-        if ($product['type'] === $type && $product["price"] <= $price) {
+        if ($product['type'] === $type || $product["price"] <= $price) {
             $typeFilter[] = $product;
-            echo "ciao";
+            
         }
     }
 }

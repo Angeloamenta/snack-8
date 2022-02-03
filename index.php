@@ -25,6 +25,12 @@ Poi con una select filtriamo i nostri prodotti per prezzo o per tipologia -->
         <option value='tablet'>tablet</option>
         <option value='music'>music</option>
       </select>
+      <select name='price' id='price'>
+        <option value='all'>all</option>
+        <option value='500'>500</option>
+        <option value='800'>800</option>
+        <option value='1000'>1000</option>
+      </select>
       <button>Cerca</button>
     </form>
     </div>
