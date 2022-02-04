@@ -14,7 +14,7 @@ if (isset($_GET['type']) !== false || isset($_GET['price']) !== false) {
     foreach ($products as $product) {
         if ($product['type'] === $type || $product["price"] <= $price) {
             $typeFilter[] = $product;
-            
+            echo "ciao";
         }
     }
 }
@@ -31,6 +31,7 @@ if (isset($_GET['type']) !== false || isset($_GET['price']) !== false) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
@@ -51,7 +52,7 @@ if (isset($_GET['type']) !== false || isset($_GET['price']) !== false) {
       <button>Cerca</button>
     </form>
     </div>
-    <div>
+    <div class="container">
         <?php
         foreach ($typeFilter as $product) {
              include __DIR__ . '/products.php';
